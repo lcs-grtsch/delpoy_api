@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+befor install:
+  - docker -t scook113/deploy_api build .
+
+script:
+  - docker run scook113/deploy_api build pytest tests/tests.py
+
