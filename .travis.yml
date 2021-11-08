@@ -3,7 +3,7 @@ services:
   - docker
 
 befor install:
-  - docker build -t scook113/deploy_api build .
+  - docker build -t scook113/deploy_api .
 
 script:
   - docker run scook113/deploy_api build pytest tests/tests.py
